@@ -1,10 +1,11 @@
+#瀹為檯鐢ㄥ埌鐨凢FT
 #ifndef __SCT_FFT_H__SJKDGHJKF_SDSDG2F_5FGN34_RETH3__INCLUDED_
 #define __SCT_FFT_H__SJKDGHJKF_SDSDG2F_5FGN34_RETH3__INCLUDED_
 
 
 #include "Global.h"
 //#define  PI      3.1415927
-#define  M_POWER       14	//数据数目1<<M_POWER 就是相当于这么多个采样点
+#define  M_POWER       14	//鏁版嵁鏁扮洰1<<M_POWER 灏辨槸鐩稿綋浜庤繖涔堝涓噰鏍风偣
 #define  N_DOTS  1<<M_POWER 
 
 typedef struct _Complex{
@@ -20,8 +21,8 @@ void    ComplexAdjoint(Complex c1,Complex &cOut);
 void 	ComplexReplace(Complex *c1,Complex *c2);
 void    CalFFT(double* waveData,int len,Complex * complexOut);
 void    ReverseComplex(Complex* c,int len);
-void    FFT(double* pWaveDataIn,double* pFFTOut,int iLen = DATALENGTH);   //进行FFT变换 滤波 撷取有用部分 输出部分 
-void    Firlter(double* pFFTInOut, int iLen = FFTDATALENGTH);                  //滤波方式 适当选择
+void    FFT(double* pWaveDataIn,double* pFFTOut,int iLen = DATALENGTH);   //杩涜FFT鍙樻崲 婊ゆ尝 鎾峰彇鏈夌敤閮ㄥ垎 杈撳嚭閮ㄥ垎 
+void    Firlter(double* pFFTInOut, int iLen = FFTDATALENGTH);                  //婊ゆ尝鏂瑰紡 閫傚綋閫夋嫨
 inline void CalPowerSpectrum(Complex &c,double *pOut);
 
 
